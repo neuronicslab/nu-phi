@@ -1,0 +1,162 @@
+/* ν-Φ theme. Lab-instrument and datasheet conventions: ruled tables, plots with scale bars.
+   paper #F2F4F0 · grid #DDE3DB · ink #16222B · muted #56646C · trace #2A4FA8 */
+
+[data-md-color-scheme="nuphi-paper"] {
+  --nuphi-paper: #F2F4F0;
+  --nuphi-grid: #DDE3DB;
+  --nuphi-grid-major: #C9D2C7;
+  --nuphi-ink: #16222B;
+  --nuphi-muted: #56646C;
+  --nuphi-trace: #2A4FA8;
+  --nuphi-marker: #8A5A00;
+  --nuphi-plot: #FBFCFA;
+  --md-default-bg-color: var(--nuphi-paper);
+  --md-default-fg-color: var(--nuphi-ink);
+  --md-default-fg-color--light: var(--nuphi-muted);
+  --md-default-fg-color--lighter: #8A969C;
+  --md-default-fg-color--lightest: var(--nuphi-grid);
+  --md-primary-fg-color: var(--nuphi-ink);
+  --md-primary-bg-color: var(--nuphi-paper);
+  --md-accent-fg-color: var(--nuphi-trace);
+  --md-typeset-color: var(--nuphi-ink);
+  --md-typeset-a-color: var(--nuphi-trace);
+  --md-code-bg-color: #E7EBE5;
+  --md-footer-bg-color: var(--nuphi-ink);
+  --md-footer-bg-color--dark: #0E171D;
+}
+
+[data-md-color-scheme="nuphi-slate"] {
+  --nuphi-paper: #11191E;
+  --nuphi-grid: #1D2A31;
+  --nuphi-grid-major: #27363F;
+  --nuphi-ink: #E1E7E4;
+  --nuphi-muted: #9AA8A6;
+  --nuphi-trace: #93ACF2;
+  --nuphi-marker: #E0B35A;
+  --nuphi-plot: #151F25;
+  --md-default-bg-color: var(--nuphi-paper);
+  --md-default-fg-color: var(--nuphi-ink);
+  --md-default-fg-color--light: var(--nuphi-muted);
+  --md-default-fg-color--lighter: #6F7D7C;
+  --md-default-fg-color--lightest: var(--nuphi-grid);
+  --md-primary-fg-color: #0C1216;
+  --md-primary-bg-color: var(--nuphi-ink);
+  --md-accent-fg-color: var(--nuphi-trace);
+  --md-typeset-color: var(--nuphi-ink);
+  --md-typeset-a-color: var(--nuphi-trace);
+  --md-code-bg-color: #172228;
+  --md-code-fg-color: #D6DEDB;
+  --md-footer-bg-color: #0C1216;
+  --md-footer-bg-color--dark: #080C0F;
+}
+
+/* Header: ink bar, the wordmark in the title slot */
+.md-header, .md-tabs { background: var(--md-primary-fg-color); color: var(--md-primary-bg-color); }
+.md-header__topic:first-child { font-weight: 700; letter-spacing: 0.02em; }
+
+.md-typeset { font-size: 0.84rem; line-height: 1.65; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 { color: var(--nuphi-ink); font-weight: 650; letter-spacing: -0.01em; }
+.md-typeset h1 { font-size: 2rem; margin-bottom: 0.6em; }
+.md-typeset h2 { font-size: 1.3rem; margin-top: 2em; }
+.md-typeset h3 { font-size: 1.02rem; }
+.md-content__inner > p, .md-typeset ul, .md-typeset ol { max-width: 42rem; }
+
+/* Tables read like a lab datasheet: ruled rows, no boxes */
+.md-typeset table:not([class]) { border: 0; box-shadow: none; font-size: 0.78rem; background: transparent; }
+.md-typeset table:not([class]) th { background: transparent; border-bottom: 2px solid var(--nuphi-ink); color: var(--nuphi-ink); font-weight: 650; }
+.md-typeset table:not([class]) td { border-top: 1px solid var(--nuphi-grid-major); }
+
+/* ---------- home ---------- */
+.nuphi-hero { background: var(--nuphi-paper); border-bottom: 1px solid var(--nuphi-grid-major); }
+.nuphi-hero__inner { display: grid; grid-template-columns: minmax(18rem, 5fr) 7fr; gap: 3rem; align-items: center; padding: 3rem 0.8rem 2.8rem; }
+.nuphi-hero__name { font-size: 1rem; font-weight: 700; letter-spacing: 0.02em; margin: 0 0 1rem; color: var(--nuphi-muted); }
+.nuphi-hero__title { font-size: clamp(1.6rem, 3.2vw, 2.3rem); line-height: 1.18; font-weight: 650; letter-spacing: -0.015em; margin: 0 0 1rem; color: var(--nuphi-ink); max-width: 20ch; }
+.nuphi-hero__lede { font-size: 0.95rem; line-height: 1.6; max-width: 34rem; color: var(--nuphi-ink); margin: 0 0 1.6rem; }
+.nuphi-hero__actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; }
+.nuphi-hero__actions .md-button {
+  display: inline-block; margin: 0; padding: 0.5em 1.2em; font-size: 0.78rem; font-weight: 600;
+  border: 1px solid var(--nuphi-ink); border-radius: 3px; color: var(--nuphi-ink); transition: background-color .15s, color .15s; }
+.nuphi-hero__actions .md-button--primary { background: var(--nuphi-ink); color: var(--nuphi-paper); }
+.nuphi-hero__actions .md-button:hover { background: var(--nuphi-trace); border-color: var(--nuphi-trace); color: #fff; }
+.nuphi-hero__actions .md-button:focus-visible { outline: 2px solid var(--nuphi-trace); outline-offset: 3px; }
+
+/* The figure looks like a plot from a paper: fine grid, scale bars, a caption */
+.nuphi-hero__figure { margin: 0; }
+.nuphi-hero__figure svg {
+  background-color: var(--nuphi-plot);
+  background-image: linear-gradient(var(--nuphi-grid) 1px, transparent 1px), linear-gradient(90deg, var(--nuphi-grid) 1px, transparent 1px);
+  background-size: 24px 24px; border: 1px solid var(--nuphi-grid-major); padding: 10px 8px 4px; box-sizing: border-box; }
+.nuphi-hero__figure figcaption { font-size: 0.64rem; color: var(--nuphi-muted); margin-top: 0.45rem; }
+
+.nuphi-traces { width: 100%; height: auto; display: block; }
+.nuphi-traces__path { fill: none; stroke: var(--nuphi-trace); stroke-width: 1.1; stroke-linejoin: round; }
+.nuphi-traces__path--emg { stroke-width: 0.7; }
+.nuphi-traces__label, .nuphi-traces__slabel { font: 400 17px/1 "Commissioner", sans-serif; fill: var(--nuphi-muted); }
+.nuphi-traces__group { font: 600 17px/1 "Commissioner", sans-serif; fill: var(--nuphi-ink); }
+.nuphi-traces__marker { stroke: var(--nuphi-marker); stroke-width: 1; stroke-dasharray: 3 3; }
+.nuphi-traces__mlabel { font: 500 17px/1 "Commissioner", sans-serif; fill: var(--nuphi-marker); }
+.nuphi-traces__rule { stroke: var(--nuphi-grid-major); stroke-width: 1; }
+.nuphi-traces__scale { stroke: var(--nuphi-ink); stroke-width: 2.5; fill: none; }
+
+@media (max-width: 60em) { .nuphi-hero__inner { grid-template-columns: 1fr; gap: 1.8rem; padding-top: 2rem; } }
+
+/* Key specs: one ruled row, like the top of a datasheet; wraps to a grid on small screens */
+.md-typeset dl.nuphi-keyspecs { display: grid; grid-template-columns: repeat(6, auto); gap: 0 1.6rem; margin: 0.8rem 0 0; border-bottom: 1px solid var(--nuphi-grid-major); padding-bottom: 0.7rem; }
+.md-typeset dl.nuphi-keyspecs dt { color: var(--nuphi-muted); font-weight: 500; font-size: 0.7rem; margin: 0; }
+.md-typeset dl.nuphi-keyspecs dd { margin: 0.2rem 0 0; font-weight: 650; font-size: 0.9rem; }
+@media (max-width: 60em) { .md-typeset dl.nuphi-keyspecs { grid-template-columns: repeat(3, auto); gap: 0.8rem 1.4rem; } }
+@media (max-width: 30em) { .md-typeset dl.nuphi-keyspecs { grid-template-columns: repeat(2, 1fr); } }
+
+/* Signal path diagram */
+.nuphi-figure-scroll { overflow-x: auto; margin: 0.6rem 0 1.2rem; }
+.nuphi-diagram { width: 100%; min-width: 640px; height: auto; display: block; }
+.nuphi-diagram rect { fill: var(--nuphi-plot); stroke: var(--nuphi-ink); stroke-width: 1; }
+.nuphi-diagram .nuphi-diagram__board { fill: none; stroke: var(--nuphi-muted); stroke-dasharray: 5 4; }
+.nuphi-diagram .nuphi-diagram__blk rect { stroke: var(--nuphi-trace); stroke-width: 1.4; }
+.nuphi-diagram .t1 { font: 600 14px/1 "Commissioner", sans-serif; fill: var(--nuphi-ink); }
+.nuphi-diagram .t2 { font: 400 12.5px/1 "Commissioner", sans-serif; fill: var(--nuphi-muted); }
+.nuphi-diagram .t3 { font: 500 11.5px/1 "Commissioner", sans-serif; fill: var(--nuphi-trace); }
+.nuphi-diagram__wire path { fill: none; stroke: var(--nuphi-ink); stroke-width: 1.3; }
+.nuphi-diagram__wire .dashed { stroke-dasharray: 6 4; stroke: var(--nuphi-trace); }
+.nuphi-diagram__head { fill: var(--nuphi-ink); }
+
+.nuphi-three, .nuphi-split { display: grid; gap: 0 2rem; margin: 0.4rem 0 0.4rem; }
+.nuphi-three { grid-template-columns: repeat(3, 1fr); }
+.nuphi-split { grid-template-columns: 1fr 1fr; }
+.nuphi-three > div, .nuphi-split > div { border-top: 1px solid var(--nuphi-ink); }
+.nuphi-three h3, .nuphi-split h3 { margin-top: 0.7em; font-size: 0.9rem; }
+.nuphi-three p, .nuphi-split p { font-size: 0.8rem; }
+@media (max-width: 60em) { .nuphi-three { grid-template-columns: 1fr; } }
+@media (max-width: 45em) { .nuphi-split { grid-template-columns: 1fr; } }
+
+/* ---------- locked pages ---------- */
+.nuphi-locked { border-left: 3px solid var(--nuphi-trace); padding: 0.4rem 0 0.4rem 1rem; margin: 1.5rem 0; }
+.nuphi-locked__msg { font-size: 0.95rem; margin: 0 0 0.8rem; }
+.nuphi-locked__actions .md-button { margin: 0 0.4rem 0.4rem 0; }
+.nuphi-preview-banner { background: #B3261E; color: #fff; padding: 0.5rem 0.8rem; font-weight: 650; margin-bottom: 1rem; }
+
+/* ---------- header badge ---------- */
+.nuphi-badge { display: flex; align-items: center; gap: 0.6rem; font-size: 0.66rem; margin-left: 0.6rem; white-space: nowrap; }
+.nuphi-badge a, .nuphi-badge button { color: inherit; font: inherit; background: none; border: 1px solid currentColor; border-radius: 2px; padding: 0.15rem 0.55rem; cursor: pointer; opacity: 0.9; }
+.nuphi-badge a:hover, .nuphi-badge button:hover { opacity: 1; }
+.nuphi-badge a:focus-visible, .nuphi-badge button:focus-visible { outline: 2px solid var(--nuphi-trace); outline-offset: 2px; }
+@media (max-width: 45em) { .nuphi-badge__who { display: none; } }
+
+/* ---------- login form ---------- */
+.nuphi-login { max-width: 22rem; margin-top: 1.2rem; }
+.nuphi-login label { display: block; font-weight: 600; margin: 0.9rem 0 0.25rem; }
+.nuphi-login input[type=text], .nuphi-login input[type=password] {
+  width: 100%; font: inherit; font-size: 0.85rem; padding: 0.45rem 0.55rem; color: var(--nuphi-ink);
+  background: transparent; border: 1px solid var(--nuphi-muted); border-radius: 2px; }
+.nuphi-login input:focus-visible { outline: 2px solid var(--nuphi-trace); outline-offset: 1px; border-color: var(--nuphi-trace); }
+.nuphi-login .nuphi-check { display: flex; gap: 0.5rem; align-items: flex-start; font-weight: 400; margin-top: 0.8rem; }
+.nuphi-login .nuphi-check input { margin-top: 0.3rem; }
+.nuphi-login button[type=submit] { margin-top: 1.2rem; cursor: pointer; }
+.nuphi-login button[disabled] { opacity: 0.6; cursor: progress; }
+#nuphi-login-status { min-height: 1.4em; color: var(--nuphi-muted); margin-top: 0.8rem; }
+
+/* Home: the hero already has a bottom rule; less space before the specs row */
+.md-main__inner:has(dl.nuphi-keyspecs) { margin-top: 0; }
+.md-content__inner:has(> dl.nuphi-keyspecs) { padding-top: 0.6rem; }
+.md-content__inner:has(> dl.nuphi-keyspecs)::before { display: none; }
+.nuphi-keyspecs + h2 { margin-top: 1.4em; }

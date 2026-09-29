@@ -1,0 +1,12 @@
+{
+ "format": 1,
+ "iter": 600000,
+ "kv": 1,
+ "users": {
+  "555278526ed5218ef19e21638ed5b81a8ffb0ee60c197af2f4e6f3bf82d3f107": {
+   "ct": "/ux8AIDU2Zf2IHEpcOfMgDbM+9Wa3cKWUdTzzwgZkLuYskrgsBRnDGo29OF2nZqhxCP8A4s3m1JIUhp3nqmshBCD7dBFwaL296iftHoD5hlRavzoF4mHFdjjUMClcvXHci9xAk7hic0wth+kznmZQLMSyzPVzD1M1R1aLWxKwGZ7x4yrWGpqDSqHfUGmgxvYTjMEe2Ikvf8qLZPeTwcegIhOtSs5Or/2QjHL4gvXstzLs3k=",
+   "iv": "Tc5DDHEKbnghf4tL",
+   "salt": "qTqU/f/RzTtSH+XlmER1Wg=="
+  }
+ }
+}
